@@ -1,30 +1,37 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+#include <conio.h>
 
-struct DiemOxy{
-	float x,y;
+struct Oxy
+{
+	int x, y;
 };
+typedef struct Oxy OXY;
+void NhapOxy(OXY &);
+void XuatOxy(OXY);
 
-typedef struct DiemOxy DIEM;
-
-void nhapDiem(DIEM &);
-void xuatDiem(DIEM);
-
-void nhapDiem(DIEM &d){
-	printf("nhap diem x0 = ");
-	scanf("%f",&d.x);
-	printf("nhap diem y0 = ");
-	scanf("%f",&d.y);
+void NhapOxy(OXY &nhap)
+{
+	do
+	{
+		printf("Nhap x=");
+		scanf("%d", &nhap.x);
+	} while (nhap.x < 0);
+	do
+	{
+		printf("Nhap y= ");
+		scanf("%d", &nhap.y); //bao loi khuc nay, eo hieu luon vcl
+	} while (&nhap.y < 0);
+}
+void XuatOxy(OXY nhap)
+{
+	printf("Toa do diem Oxy la (%d,%d)", nhap.x, nhap.y);
 }
 
-void xuatDiem(DIEM d){
-	printf("M(%.2f,%.2f)",d.x,d.y);
-}
-
-int main(){
-	DIEM d;
-	nhapDiem(d);
-	xuatDiem(d);
+int main()
+{
+	OXY nhap;
+	NhapOxy(nhap);
+	XuatOxy(nhap);
 	getch();
 	return 0;
 }

@@ -11,16 +11,19 @@ void nhapDiem(DIEM &d);
 void xuatDiem(DIEM);
 
 void nhapDiem(DIEM &d){
-	printf("nhap diem x0 = ");
+
+	printf("Nhap diem x0 = ");  //thich thi dowhile
 	scanf("%f",&d.x);
-	printf("nhap diem y0 = ");
+
+	printf("Nhap diem y0 = ");  //thich thi dowhile
 	scanf("%f",&d.y);
-	printf("nhap diem z0 = ");
+
+	printf("Nhap diem z0 = ");  //thich thi dowhile
 	scanf("%f",&d.z);
 }
 
 void xuatDiem(DIEM d){
-	printf("M(%.2f,%.2f,%.2f)",d.x,d.y,d.z);
+	printf("M(%f,%f,%f)",d.x,d.y,d.z);
 }
 
 int main(){
