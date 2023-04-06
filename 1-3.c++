@@ -20,7 +20,7 @@ void NhapOxy(OXY &nhap)
 	{
 		printf("Nhap y= ");
 		scanf("%d", &nhap.y); //bao loi khuc nay, eo hieu luon vcl
-	} while (&nhap.y < 0);
+	} while (nhap.y < 0);
 }
 void XuatOxy(OXY nhap)
 {

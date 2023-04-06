@@ -12,12 +12,12 @@ void XuatPhanSo(PhanSo);
 
 void NhapPhanSo(PhanSo &ps)
 {
-    printf("Nhap tu so= ");
+    printf("\nNhap tu so= ");
     scanf("%d", &ps.TuSo);
 
     do
     {
-        printf("/nNhap mau so=");
+        printf("\nNhap mau so=");
         scanf("%d", &ps.MauSo);
     } while (ps.MauSo == 0);
 }
